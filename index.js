@@ -19,13 +19,7 @@ console.log(os.totalmem());
 
 const client = require('prom-client');
 client.collectDefaultMetrics();
-const gauge = new client.Gauge({ name: 'mock_ti_metric', help: 'mock_ti_help' });
-const counter = new client.Counter({ name: 'mock_ti_count', help: 'mock_ti_help' });
-//const monitor = {
-//	in: new client.Counter({ name: 'mock_ti_incoming', help: 'count of incoming messages' }),
-//	processed: new client.Counter({ name: 'mock_ti_processes', help: 'count of incoming messages processed' }),
-//	out: new client.Counter({ name: 'mock_ti_outgoing', help: 'count of outgoing messages', labelNames: [ 'messageType' ] })
-//};
+
 const coreMetrics = {
 	utilization: {
 		cpu: new client.Gauge({name: 'container_cpu_utilization', help: 'cpu utilization'}),
@@ -45,18 +39,6 @@ const errors = {
 		none: new client.Gauge({name: 'no_publisher_connection', help: 'count times there is not a valid publisher connection'})
 	}
 };
-
-gauge.set(100);
-counter.reset();
-//monitor.in.reset();
-//monitor.processed.reset();
-//monitor.out.reset();
-
-setInterval(function() {
-	counter.inc(Math.random());
-	gauge.set(100*Math.random(), Date.now());
-}, 1000);
-
 
 var process_cpu_user_seconds_total = client.register.getSingleMetric('process_cpu_user_seconds_total');
 var process_start_time_seconds = client.register.getSingleMetric('process_start_time_seconds');

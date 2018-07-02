@@ -1,6 +1,6 @@
 {
 	"name": "k8s-prometheus-metrics",
-	"version": "0.1.2",
+	"version": "0.2.0",
 	"description": "Provides your application metrics to prometheus server.",
 	"private": false,
 	"repository": {
