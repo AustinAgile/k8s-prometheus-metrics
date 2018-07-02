@@ -1,6 +1,6 @@
 {
 	"name": "k8s-prometheus-metrics",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Provides your application metrics to prometheus server.",
 	"private": false,
 	"repository": {
@@ -12,6 +12,7 @@
 	"author": "Mattersight",
 	"license": "SEE LICENSE IN LICENSE.txt",
 	"dependencies": {
+		"async": "*",
 		"express": "*",
 		"prom-client": "*"
 	},

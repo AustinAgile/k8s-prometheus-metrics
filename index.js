@@ -1,5 +1,7 @@
 'use strict';
 
+var async = require('async');
+
 function getSimpleNumber(command, setter, cb) {
 	exec(command, function(err, stdout, stderr) {
 		if (err) {
