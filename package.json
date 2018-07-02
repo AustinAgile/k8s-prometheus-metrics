@@ -1,6 +1,6 @@
 {
 	"name": "k8s-prometheus-metrics",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Provides your application metrics to prometheus server.",
 	"private": false,
 	"repository": {
@@ -13,6 +13,7 @@
 	"license": "SEE LICENSE IN LICENSE.txt",
 	"dependencies": {
 		"async": "*",
+		"child_process": "*",
 		"express": "*",
 		"prom-client": "*"
 	},
