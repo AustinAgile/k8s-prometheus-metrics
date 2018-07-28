@@ -110,7 +110,7 @@ app.get('/metrics', function (req, res) {
 });
 
 app.listen(9143, function () {
-	console.log("listening on 9143");
+	console.log("k8s-prometheus-metrics listening on 9143");
 });
 
 module.exports = function() {
