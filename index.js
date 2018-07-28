@@ -116,7 +116,7 @@ app.listen(9143, function () {
 	console.log("k8s-prometheus-metrics listening on 9143");
 });
 
-var prepareMetrics;
+var prepareMetrics = function(cb) {cb();};
 module.exports = {
 	client: client,
 	onGetMetrics: function (cb) {
