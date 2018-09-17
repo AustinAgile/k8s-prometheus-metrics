@@ -1,7 +1,6 @@
 'use strict';
 
 var async = require('async');
-var exec = require('child_process').exec;
 
 function getSimpleNumber(command, setter, cb) {
 	exec(command, function(err, stdout, stderr) {
